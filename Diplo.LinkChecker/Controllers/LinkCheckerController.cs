@@ -132,34 +132,6 @@ namespace Diplo.LinkChecker.Controllers
                     updatedLinks.Add(checkedLink);
                 }
 
-
-                //foreach (var code in displayErrorCodes)
-                //{
-                //    if (code.Length > 0)
-                //    {
-                //        var prefix = code.Substring(0, 1);
-                //        var matches = linksWithCodes.Where(n => n.StatusCode.StartsWith(prefix)).ToList();
-                //        if (matches.Any())
-                //        {
-                //            foreach (var match in matches)
-                //            {
-                //                match.IsDisplayCode = true;
-                //                updatedLinks.Add(match);
-                //            }
-                //        }
-                //    }
-                //}
-
-                //if (displayAllErrors)
-                //{
-                //    //Also show errors without a code
-                //    foreach (var match in linksWithOutCodes)
-                //    {
-                //        match.IsDisplayCode = true;
-                //        updatedLinks.Add(match);
-                //    }
-                //}
-
                 page.CheckedLinks = updatedLinks;
             }
 

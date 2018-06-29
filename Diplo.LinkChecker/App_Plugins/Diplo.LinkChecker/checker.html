@@ -120,7 +120,22 @@
                             </ul>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="span3"><emphasis>Summary</emphasis></div>
+                        <div class="span3"><emphasis>Status Code</emphasis></div>
+                        <div class="span3"><emphasis>Link Count</emphasis></div>
+                    </div>
+                    <div class="row">
+                        <div class="span3">{{ checkedPages.StatusCodeCounts }}</div>
 
+                    </div>
+                    <div ng-repeat="code in checkedPages.StatusCodeCounts">
+                        <div class="row">
+                            <div class="span3"></div>
+                            <div class="span3">{{ code[0] }}</div>
+                            <div class="span3">{{ code[1] }}</div>
+                        </div>
+                    </div>
                     <div class="accordion" id="accordion-{{$index}}" ng-show="page.CheckedLinks.length > 0">
                         <div class="accordion-group">
 

@@ -90,6 +90,7 @@ angular.module("umbraco")
                                 $scope.linksOkCnt += data.SuccessCount;
                                 $scope.pageCnt++;
 
+                                //$scope.statusCodeCounts +=
                                 $scope.checkedPages.push(data);
                                 $scope.progress = calculateProgress(cnt, dataLength);
 

@@ -117,6 +117,28 @@ namespace Diplo.LinkChecker.Models
             }
         }
 
+        /// <summary>
+        /// List of all Status Codes with number of links
+        /// </summary>
+        public Dictionary<string, int> StatusCodeCounts
+        {
+            get
+            {
+                var statusCounts = new Dictionary<string, int>();
+
+                var query = (from item in this.CheckedLinks select item).GroupBy(n=> n.StatusCode);
+
+                foreach (var nameGroup in query)
+                {
+                    var statusCode = nameGroup.Key!= null ? nameGroup.Key : "NONE";
+                    var count = nameGroup.Count();
+
+                    statusCounts.Add(statusCode,count);
+                }
+
+                return statusCounts;
+            }
+        }
  
     }
 }
